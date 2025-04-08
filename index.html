@@ -94,20 +94,25 @@
         .linkedIn-circle a,
         .projects-circle a,
         .link-circle a {
-            color: #b28e54; /* Change text color to purple */
-            text-decoration: none;
-            font-size: 24px; /* Larger font size */
-            font-weight: bold; /* Bold text */
+            position: absolute;
+            inset: 0; /* Makes <a> fill its parent */
             display: flex;
             align-items: center;
-            gap: 10px; /* Space between text and circle */
+            justify-content: center;
+            color: #b28e54;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            gap: 10px;
+            z-index: 1;
         }
 
         .linkedIn-circle a span,
         .projects-circle a span,
         .link-circle a span {
-            font-size: 24px; /* Larger font size */
-            margin-left: 100px; /* Move text outside the circle */
+            font-size: 24px;
+            margin-left: 100px;
+            pointer-events: none; /* So clicking text still triggers the <a> */
         }
 
         .linkedIn-circle i {
@@ -200,7 +205,7 @@
         </div>
 
         <div class="linkedIn-circle">
-            <a href="https://www.linkedin.com/" target="_blank">
+            <a href="https://www.linkedin.com/in/oscar-strømsli-8348a92a8" target="_blank" rel="noopener noreferrer"> 
                 <i class="fa-brands fa-linkedin" style="color: #b28e54; font-size: 80px;"></i>
                 <span>LinkedIn</span>
             </a>
